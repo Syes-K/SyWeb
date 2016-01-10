@@ -1,2 +1,5 @@
 #忽略idea目录
 .idea/
+
+#忽略npm安装的第三方组件
+node_modules/

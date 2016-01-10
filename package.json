@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/Syses/SyWeb/issues"
   },
-  "homepage": "https://github.com/Syses/SyWeb#readme"
+  "homepage": "https://github.com/Syses/SyWeb#readme",
+  "dependencies": {
+    "node-static": "*",
+    "sockjs": "^0.3.15"
+  }
 }
