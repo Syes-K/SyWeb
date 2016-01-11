@@ -1,13 +1,16 @@
 /**
  * Created by ln on 2016/1/10.
  */
-var static =require('node-static');
-var http = require('http');
-var fileServer = new static.Server('./public',{cache:3600});//cache 3600 hours
-var httpServer= http.createServer();
+
+var httpServer=  require('http').createServer();
+var fileServer = new require('node-static').Server('./public',{cache:3600});//cache 3600 hours
+var user = require('./server/user');
+//静态资源服务器
 httpServer.addListener('request', function (req,res) {
     fileServer.serve(req,res);
-    console.log(req.headers)
 });
+
+// 开启web socket 连接 【api 前缀】
+user(httpServer);
 
 httpServer.listen(3000);

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 600px;
+            float: left;
+            margin: 0 20px 0 20px;
+        }
+
+        .box div, .box input {
+            border: 1px solid;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            width: 100%;
+            padding: 0;
+            margin: 5px;
+        }
+
+        .box div {
+            border-color: grey;
+            height: 300px;
+            overflow: auto;
+        }
+
+        .box input {
+            height: 30px;
+        }
+
+        h1 {
+            margin-left: 30px;
+        }
+
+        body {
+            background-color: #F0F0F0;
+            font-family: "Arial";
+        }
+    </style>
+    <!--<script src="http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>-->
+    <script src="/bower_components/sockjs-client/dist/sockjs.js"></script>
+    <script src="bower_components/seajs/dist/sea-debug.js"></script>
+    <script src="js/config.js"></script>
+</head>
+<body>
+
+<h1>SockJS api example</h1>
+
+<div id="first" class="box">
+    <div id="content1"></div>
+    <form id="form1">
+        <input id="txt1" autocomplete="off" placeholder="Type here..."/>
+    </form>
+</div>
+
+<script>
+//    var user = new SockJS('/user');
+//    user.route = {};
+//    var _input = document.getElementById('txt1');
+//    var content1 = document.getElementById('content1');
+//    user.onopen = function (e) {
+//        showMsg('[socket] opened:', JSON.stringify(e.url));
+//    };
+//    user.onclose = function (e) {
+//        showMsg('[socket] closed:', JSON.stringify(e.url));
+//    };
+//    user.onmessage = function (e) {
+//        if (e.data) {
+//            var obj = JSON.parse(e.data);
+//            if (obj.method) {
+//                user.route[obj.method](obj);
+//            }
+//        }
+//    }
+//
+//    user.on = function (method, callback) {
+//        user.route[method] = callback;
+//    }
+//    user.on('/test', function (result) {
+//        showMsg('[ ] message:', result);
+//    });
+//    document.getElementById('form1').addEventListener('submit', function (e) {
+//        user.send(JSON.stringify({content: _input.value, method: '/test'}));
+//        showMsg('[ ] sending', {content: _input.value, method: '/test'});
+//        _input.value = '';
+//        e.preventDefault();
+//    })
+//    var showMsg = function (m, p) {
+//        p = (p === undefined) ? '' : JSON.stringify(p);
+//        content1.innerHTML += ( '<code>' + m + ' ' + p + '</code>');
+//        content1.innerHTML += ("<br/>");
+//        content1.scrollTop += 10000;
+//    };
+
+</script>
+<script>
+//    var _input = document.getElementById('txt1');
+//    var content1 = document.getElementById('content1');
+//    var r = seajs.use('route');
+//    var user = r.createRoute('user');
+//    user.on('/test', function (result) {
+//        showMsg('[ ] message:', result);
+//    });
+//    document.getElementById('form1').addEventListener('submit', function (e) {
+//        user.send(JSON.stringify({content: _input.value, method: '/test'}));
+//        showMsg('[ ] sending', {content: _input.value, method: '/test'});
+//        _input.value = '';
+//        e.preventDefault();
+//    })
+//    var showMsg = function (m, p) {
+//        p = (p === undefined) ? '' : JSON.stringify(p);
+//        content1.innerHTML += ( '<code>' + m + ' ' + p + '</code>');
+//        content1.innerHTML += ("<br/>");
+//        content1.scrollTop += 10000;
+//    };
+    seajs.use('main');
+</script>
+</body>
+</html>

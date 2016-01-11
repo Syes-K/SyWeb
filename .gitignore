@@ -3,3 +3,6 @@
 
 #忽略npm安装的第三方组件
 node_modules/
+
+#忽略bower 安装的第三方组件
+public/bower_components
