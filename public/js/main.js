@@ -6,12 +6,21 @@ define(function (require, exports, module) {
     var content1 = document.getElementById('content1');
     var r = require('route');
     var user = r.createRoute('/user');
-    user.on('/test', function (result) {
+    user.on('test', function (result) {
         showMsg('[ ] message:', result);
     });
+    user.on('Close', function (result) {
+        showMsg('[ ] Close:', result);
+    });
+    user.on('Error', function (result) {
+        showMsg('[ ] Error:', result);
+    });
+    user.on('Open', function (result) {
+        showMsg('[ ] Open:', result);
+    });
     document.getElementById('form1').addEventListener('submit', function (e) {
-        user.send('/test', _input.value);
-        showMsg('[ ] sending', {content: _input.value, method: '/test'});
+        user.send('test', _input.value);
+        showMsg('[ ] sending', {content: _input.value, method: 'test'});
         _input.value = '';
         e.preventDefault();
     })
