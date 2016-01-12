@@ -55,65 +55,6 @@
 </div>
 
 <script>
-//    var user = new SockJS('/user');
-//    user.route = {};
-//    var _input = document.getElementById('txt1');
-//    var content1 = document.getElementById('content1');
-//    user.onopen = function (e) {
-//        showMsg('[socket] opened:', JSON.stringify(e.url));
-//    };
-//    user.onclose = function (e) {
-//        showMsg('[socket] closed:', JSON.stringify(e.url));
-//    };
-//    user.onmessage = function (e) {
-//        if (e.data) {
-//            var obj = JSON.parse(e.data);
-//            if (obj.method) {
-//                user.route[obj.method](obj);
-//            }
-//        }
-//    }
-//
-//    user.on = function (method, callback) {
-//        user.route[method] = callback;
-//    }
-//    user.on('/test', function (result) {
-//        showMsg('[ ] message:', result);
-//    });
-//    document.getElementById('form1').addEventListener('submit', function (e) {
-//        user.send(JSON.stringify({content: _input.value, method: '/test'}));
-//        showMsg('[ ] sending', {content: _input.value, method: '/test'});
-//        _input.value = '';
-//        e.preventDefault();
-//    })
-//    var showMsg = function (m, p) {
-//        p = (p === undefined) ? '' : JSON.stringify(p);
-//        content1.innerHTML += ( '<code>' + m + ' ' + p + '</code>');
-//        content1.innerHTML += ("<br/>");
-//        content1.scrollTop += 10000;
-//    };
-
-</script>
-<script>
-//    var _input = document.getElementById('txt1');
-//    var content1 = document.getElementById('content1');
-//    var r = seajs.use('route');
-//    var user = r.createRoute('user');
-//    user.on('/test', function (result) {
-//        showMsg('[ ] message:', result);
-//    });
-//    document.getElementById('form1').addEventListener('submit', function (e) {
-//        user.send(JSON.stringify({content: _input.value, method: '/test'}));
-//        showMsg('[ ] sending', {content: _input.value, method: '/test'});
-//        _input.value = '';
-//        e.preventDefault();
-//    })
-//    var showMsg = function (m, p) {
-//        p = (p === undefined) ? '' : JSON.stringify(p);
-//        content1.innerHTML += ( '<code>' + m + ' ' + p + '</code>');
-//        content1.innerHTML += ("<br/>");
-//        content1.scrollTop += 10000;
-//    };
     seajs.use('main');
 </script>
 </body>

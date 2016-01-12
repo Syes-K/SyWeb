@@ -1,0 +1,22 @@
+{
+  "name": "syweb",
+  "description": "amazing web page",
+  "main": "index.js",
+  "authors": [
+    "yongsheng.kuang <yongsheng.kuang@ptthink.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Syses/SyWeb",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "seajs": "~3.0.0",
+    "sockjs-client": "~1.0.3"
+  }
+}
