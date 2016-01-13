@@ -6,7 +6,8 @@ define(function (require, exports, module) {
         //var sockjs=require('sockjs');
         var _routeMap = {};
         var route = new SockJS(prefix,null,{sessionId: function () {
-            return 'abcdefghijklmn';
+            var scookie=require('scookie');
+            return scookie.getCookie('userSessionId');
         }});
         route.onopen = function (e) {
             if ( _routeMap['Open']) {

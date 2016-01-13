@@ -10,8 +10,12 @@ module.exports = function (httpServer, prefix) {
     //var sockServer = sockjs.createServer({sockjs_url: '/bower_components/sockjs-client/dist/sockjs.js'});
     var sockServer = sockjs.createServer();
     sockServer.on('connection', function (conn) {
-        var reg=new RegExp('')
+        var url_reg=/^(.+)\/(.+)\/(.+)\/(.+)$/;
+        url_reg.exec(conn.url);
+        var prefix=RegExp.$1;
+        var sessionId=RegExp.$3;
         conn.on('data', function (data) {
+            var sid= sessionId;
             var msg = JSON.parse(data);
             if (msg.method && __route[msg.method]) {
                 __route[msg.method](conn, msg);
