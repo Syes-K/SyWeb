@@ -28,5 +28,11 @@
     "q": "^1.4.1",
     "serve-favicon": "~2.3.0",
     "sockjs": "^0.3.15"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-flatten": "^0.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.1"
   }
 }
