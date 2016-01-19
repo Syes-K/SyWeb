@@ -40,8 +40,9 @@
     </style>
     <!--<script src="http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js"></script>-->
     <script src="/bower_components/sockjs-client/dist/sockjs.js"></script>
-    <script src="bower_components/seajs/dist/sea-debug.js"></script>
-    <script src="js/config.js"></script>
+    <script src="/bower_components/seajs/dist/sea-debug.js"></script>
+    <!--<script src="/js/com/sockjs-2d05c76699.js"></script>-->
+    <!--<script src="/js/com/sea-b77a3895c2.js"></script>-->
 </head>
 <body>
 
@@ -55,6 +56,15 @@
 </div>
 
 <script>
+    seajs.config({
+        base:'/js/',
+        alias:{
+            //sockjs:'http://cdn.jsdelivr.net/sockjs/1.0.1/sockjs.min.js',
+            main:'main.js',
+            scookie:'lib/scookie.js',
+            route:'route.js'
+        }
+    });
     seajs.use('main');
 </script>
 </body>

@@ -30,7 +30,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //  secret: 'keyboard cat'
 //}));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public_pro')));
 
 app.use('/', index);
 //app.use('/ng', routes_ng);

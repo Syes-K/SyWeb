@@ -1,0 +1,23 @@
+一、安装node-inspector
+
+npm install -g node-inspector
+二、监听Nodejs的debug调试端口
+
+node-inspector &
+见到输出下面log， http://127.0.0.1:8080/debug?port=5858  很关键，后面我们会用到
+
+[1] 2123
+casperchenMacBookPro:demo casperchen$ Node Inspector v0.6.1
+   info  - socket.io started
+Visit http://127.0.0.1:8080/debug?port=5858 to start debugging.
+三、调试grunt任务
+
+输入如下命令，将 task 替换成你要运行的命令
+
+node --debug-brk $(which gulp) task
+node --debug-brk C:\Users\ptmind\AppData\Roaming\npm\node_modules\gulp\bin\gulp default (task name)   (windows 操作系统)
+
+得到如下输出，说明grunt已经进入调试模式
+
+debugger listening on port 5858
+将上一步的 http://127.0.0.1:8080/debug?port=5858 帖到地址栏，回车，如果你看到下面场景，恭喜～

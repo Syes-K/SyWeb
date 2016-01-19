@@ -2,19 +2,10 @@
  * Created by ptmind on 2016/1/15.
  */
 var gulp=require('gulp');
-var flatten = require('gulp-flatten');
-var uglify = require('gulp-uglify');
-var rename = require('gulp-rename');
-gulp.task('default', function () {
-    console.log('this is first gulp 1');
-    gulp.src(['public/bower_components/**/sea.js','public/bower_components/**/sockjs.js'])
-        .pipe(flatten())
-        .pipe(uglify())
-        .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest( function (a) {
-            if(a.isBuffer()){
-                console.log(a.path);
-            }
-            return './public/js/lib';
-        }));
+require('./gulp_tasks/ipconfig');//ipconfig 任务: 后台打印 服务器ip信息
+require('./gulp_tasks/components_build');//编译第三方组件
+require('./gulp_tasks/public_build');//编译静态资源
+require('./gulp_tasks/pro_build');//编译静态资源
+gulp.task('default',['pro-build'], function () {
+    require('./gulp_tasks/start');
 });
