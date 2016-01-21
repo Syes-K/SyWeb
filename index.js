@@ -4,7 +4,7 @@
 
 var httpServer=  require('http').createServer();
 var nodeStatic=  require('node-static');
-var fileServer = new nodeStatic.Server('./public',{cache:3600});//cache 3600 hours
+var fileServer = new nodeStatic.Server('./public_pro',{cache:3600});//cache 3600 hours
 var user = require('./socket/routes/user');
 //静态资源服务器
 httpServer.addListener('request', function (req,res) {
